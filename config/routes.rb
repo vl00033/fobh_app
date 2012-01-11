@@ -1,4 +1,14 @@
 FobhApp::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/events"
+
+  get "pages/about"
+
+  get "pages/contact_us"
+
+  get "pages/find_us"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
