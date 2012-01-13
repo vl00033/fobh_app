@@ -1,0 +1,239 @@
+.container {
+  width: 790px;
+}
+
+.container p.welcome
+{
+float: left;
+font-size: 20px;
+font-family: "Trebuchet MS", "Times New Roman", Arial, Times, serif;
+}
+
+body {
+        margin: 0;
+	padding: 0;
+	background: #99CC99;
+	font-size: 13px;
+	text-align: justify;
+}
+
+body, th, td, input, textarea, select, option {
+	font-family: "Trebuchet MS", "Times New Roman", Arial, Times, serif;
+	color: #61492D;
+}
+
+header {
+  padding-top: 20px;
+}
+
+header img {
+  padding: 0em;
+  background: #fff;
+}
+
+section {
+  margin-top: 0em;
+  font-size: 120%;
+  padding: 20px;
+  background: #fff;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+/* Links */
+
+a {
+	color: #66A342;
+}
+
+a:hover {
+	color: #66A342;
+}
+a:visited {
+  color: #66A342;
+}
+
+/*navigation*/
+
+nav {
+  float: left;
+}
+
+.icon{
+	width: 692px;
+	height: 340px;
+}
+
+.arrowgreen{
+	width: 220px; /*width of menu*/
+	border-style: solid solid none solid;
+	border-color: #94AA74;
+	border-size: 1px;
+	border-width: 1px;
+}
+
+.arrowgreen ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+	
+.arrowgreen li a{
+	font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+	display: block;
+	background: transparent url(arrowgreen.gif) 100% 0;
+        height: 24px; /*Set to height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	padding: 4px 0 4px 10px;
+	line-height: 24px; /*Set line-height of bg image- padding within link (ie: 32px - 4px - 4px)*/
+	text-decoration: none;
+}	
+	
+.arrowgreen li a:link, .arrowgreen li a:visited {
+	color: #5E7830;
+}
+
+.arrowgreen li a:hover{
+	color: #26370A;
+	background-position: 100% -32px;
+}
+
+	
+.arrowgreen li a.selected{
+	color: #26370A;
+	background-position: 100% -64px;
+}
+/* Round corners */
+.round2 {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+  height:100%;
+  width:100%;
+}
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+#round a:hover, #menu .current_page_item a {
+	text-decoration: none;
+}
+
+#round .current_page_item a {
+}
+
+/* Page */
+
+#page {
+	width: 1000px;
+	margin: 0px auto;
+	background: url(images/img04.jpg) repeat-y left top;
+}
+
+#page-bgtop {
+	overflow: hidden;
+	width: 920px;
+	padding: 20px 40px 30px 40px;
+	background: url(images/img12.jpg) no-repeat left top;
+}
+
+.span-6
+{
+
+}
+
+.span-14
+{
+
+}
+
+.span-20
+{   
+    background:#C0C0C0;
+    text-align: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+.span-20 li {
+    margin: 0 10px;
+    padding: 0 10px;
+    border: 1px solid #AAA;
+    background: #ECECEC;
+    display: inline-block;
+}
+.span-20 li.selected {
+    background: #FFF;
+    color: #000;
+}
+.span-20 {
+    position: relative;
+    z-index: 0;
+
+.span-20:before {
+    box-shadow: 2px 2px 0 #ECECEC;
+}
+.span-20:after {
+    box-shadow: -2px 2px 0 #ECECEC;
+}
+.span-20.selected:before {
+    box-shadow: 2px 2px 0 #FFF;
+}
+.span-20.selected:after {
+    box-shadow: -2px 2px 0 #FFF;
+}
+
+/* Content */
+
+#content {
+	float: right;
+	width: 620px;
+}
+
+.post {
+	margin-bottom: 40px;
+}
+
+.post .title {
+	padding: 0px 0px 10px 0px;
+	text-transform: lowercase;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	letter-spacing: -1px;
+}
+
+.post .title a {
+	border: none;
+	color: #625E48;
+}
+
+.post .meta {
+	overflow: hidden;
+	background: #EDE8CA;
+	margin-bottom: 30px;
+	padding: 5px 10px 5px 10px;
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.post .meta .date {
+	float: left;
+}
+
+.post .meta .posted {
+	float: right;
+}
+
+.post .meta a {
+}
+
+.post .entry {
+	padding: 0px 0px 20px 0px;
+	border-bottom: 1px dashed #DCD4A7;
+	text-align: justify;
+}
+

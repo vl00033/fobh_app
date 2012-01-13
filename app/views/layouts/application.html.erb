@@ -3,42 +3,41 @@
   <head>
     <title><%= title %></title>
     <%= csrf_meta_tag %>
-    <!--[if lt IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->    
-    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
-    <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+    <% render 'layouts/stylesheets' %>
   </head>
   <body>
 
-    <div class="container showgrid">
+    <div class="container">
+     <div class= "span-20">
+	<p class= "welcome">"Welcome to Fox Hill's website"</p>
+	<li><%= link_to "Register", register_path %></li>
+	<li><%= link_to "Log In", '#'%></li>
+     </div>
       <header>
 	<div id="logo">
-	<h1><%= image_tag("fobh-boxtree.jpg", :alt => "gamise ta", :class => "round") %></h1>
+	<%= image_tag("header.jpg", :alt => "gamise ta", :class => "round2") %>
         </div>
         <%= render 'layouts/stylesheets' %>
      </header>
 
-    <div class="span-5">        
+    <div class="span-6">        
      <nav class="round">
       <div class="arrowgreen">
 	<ul>
-            <li><%= link_to "Home", '#' %></li>
-            <li><%= link_to "About", '#' %></li>
-            <li><%= link_to "Contact Us", '#' %></li>
-            <li><%= link_to "Events", '#' %></li>
-            <li><%= link_to "Find Us", '#' %></li>
-          </ul>
-        </div> 
-       </nav>   
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "Contact Us", contact_us_path %></li>
+            <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Find Us", find_us_path %></li>
+        </ul>
+      </div> 
+    </nav>   
    </div>
-   <div class="span-13 last">
+   <div class="span-14 last">
       <section class="round">
         <%= yield %>
       </section>
   </div>    
-</div>
+ </div>
 </body>
 </html>
