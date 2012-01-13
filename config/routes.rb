@@ -1,14 +1,16 @@
 FobhApp::Application.routes.draw do
+  resources :users
 
-  get "users/new"
+  match '/register',  :to => 'users#new'
 
   match '/events', :to => 'pages#events'
   match '/about',   :to => 'pages#about'
   match '/contact_us', :to => 'pages#contact_us'
   match '/find_us', :to => 'pages#find_us'
-  match '/register',  :to => 'users#new'
 
   root :to => 'pages#home'
+
+  get "users/new"
 
   get "pages/home"
 
