@@ -4,18 +4,29 @@
     <title><%= title %></title>
     <%= csrf_meta_tag %>
     <% render 'layouts/stylesheets' %>
+    <%= javascript_include_tag :defaults %>
   </head>
   <body>
 
     <div class="container">
      <div class= "span-20">
 	<p class= "welcome">"Welcome to Fox Hill's website"</p>
+	<% if signed_in? %>
+	<li><%= link_to "Users", users_path %></li>
+      	<li><%= link_to "Profile", current_user %></li>
+	<li><%= link_to "Settings", edit_user_path(current_user) %></li>
+      	<% else %>
 	<li><%= link_to "Register", register_path %></li>
-	<li><%= link_to "Log In", '#'%></li>
+	<%end%>
+	<% if signed_in? %>
+	<li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+      	<% else %>
+	<li><%= link_to "Sign In", signin_path%></li>
+	<% end %>
      </div>
       <header>
 	<div id="logo">
-	<%= image_tag("header.jpg", :alt => "gamise ta", :class => "round2") %>
+	<%= image_tag("header.jpg", :alt => "boxhill", :class => "round2") %>
         </div>
         <%= render 'layouts/stylesheets' %>
      </header>

@@ -1,7 +1,10 @@
 FobhApp::Application.routes.draw do
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
   match '/register',  :to => 'users#new'
+  match '/signin',    :to => 'sessions#new'
+  match '/signout',    :to => 'sessions#destroy'
 
   match '/events', :to => 'pages#events'
   match '/about',   :to => 'pages#about'
@@ -10,16 +13,5 @@ FobhApp::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  get "users/new"
-
-  get "pages/home"
-
-  get "pages/events"
-
-  get "pages/about"
-
-  get "pages/contact_us"
-
-  get "pages/find_us"
 
 end
